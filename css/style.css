@@ -35,6 +35,7 @@ body {
 }
 .header .navbar {
   margin-left: auto;
+  z-index: 200;
 }
 .header .navbar ul {
   display: flex;
@@ -105,24 +106,25 @@ body {
 .hero .hero-container {
   width: 90%;
   margin: 0 auto;
-  padding: 30px 10px;
+  padding: 20px 5px;
 }
 .hero .hero-container .InfoPersonal {
   width: 100%;
 }
 .hero .hero-container .InfoPersonal .InfoPersonal__title-suave {
   color: #9797A7;
-  font-size: 40px;
+  font-size: 30px;
 }
 .hero .hero-container .InfoPersonal .InfoPersonal__title-bold {
   color: white;
   font-weight: bold;
-  font-size: 40px;
-  margin-top: 5px;
+  font-size: 30px;
 }
 .hero .hero-container .InfoPersonal .InfoPersonal__text {
   color: #9797A7;
   width: 90%;
+  margin: 15px 0 5px 0;
+  font-size: 15px;
 }
 .hero .hero-container .Servicios {
   width: 100%;
@@ -137,15 +139,15 @@ body {
   width: 60%;
   text-align: left;
   margin: 10px 0;
+  font-size: 14px;
 }
 .hero .hero-container .Servicios .Servicios__button {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 30%;
-  padding: 10px 20px;
   background-color: transparent;
   border: none;
+  padding: 5px 20px;
 }
 .hero .hero-container .Servicios .Servicios__button span, .hero .hero-container .Servicios .Servicios__button i {
   font-size: 10px;
@@ -153,12 +155,33 @@ body {
 }
 .hero .hero-container .Servicios .Servicios__redes {
   width: 50%;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 .hero .hero-container .Servicios .Servicios__redes i {
   color: #9F8855;
+}
+.hero .hero-container .user {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.hero .hero-container .user img {
+  width: 100%;
+  z-index: 100;
+}
+.hero .hero-container .user::after {
+  content: "";
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #282832;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

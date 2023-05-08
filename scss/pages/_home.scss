@@ -5,7 +5,7 @@
     .hero-container {
         width: 90%;
         margin: 0 auto;
-        padding: 30px 10px;
+        padding: 20px 5px;
         .InfoPersonal{
             width: 100%;
             .InfoPersonal__title-suave{
@@ -16,11 +16,13 @@
                 color: #ffff;
                 font-weight: bold;
                 font-size: $tamaño-titulo;
-                margin-top: 5px;
+              
             }
             .InfoPersonal__text{
                 color: #9797A7;
                 width: 90%;
+                margin: 15px 0 5px 0;
+                font-size: 15px;
             }
         }
         .Servicios{
@@ -35,16 +37,15 @@
                 width: 60%;
                 text-align: left;
                 margin: 10px 0;
+                font-size: 14px;
             }
             .Servicios__button{
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
-                width: 30%;
-                padding: 10px 20px;
                 background-color: transparent;
                 border: none;
-              
+              padding: 5px 20px;
                 span, i{
                     font-size: 10px;
                     color: #9F8855;
@@ -53,12 +54,33 @@
             }
             .Servicios__redes{
                width: 50%;
+               margin-top: 10px;
                display: flex;
                align-items: center;
                justify-content: space-around;
                i{
                 color: #9F8855;
                }
+            }
+        }
+        .user{
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            img{
+                width: 100%;
+                z-index: 100;
+            }
+            &::after{
+                content: "";
+                width: 220px;
+                height: 220px;
+                border-radius: 50%;
+                position: absolute;
+                background-color:#282832;
+                z-index: 1;
             }
         }
     }
