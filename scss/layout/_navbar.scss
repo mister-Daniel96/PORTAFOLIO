@@ -1,12 +1,16 @@
 .header {
-    height: 80px;
+    height: 70px;
     background-color: #353543;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 5px 30px;
     color: white;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+z-index: 200;
     .logo {
         display: flex;
         width: 20%;
@@ -25,8 +29,9 @@
     }
 
     .navbar {
-       margin-left: auto;
-       z-index: 200;
+        margin-left: auto;
+        z-index: 200;
+
         ul {
             display: flex;
 
@@ -46,6 +51,7 @@
 @media screen and (max-width:600px) {
     .header {
         background-color: #282832;
+
         .logo {
 
             .logo-title {

@@ -1,85 +1,106 @@
 .hero {
+    margin-top: 70px;
     background-color: #373543;
     min-height: 100vh;
     width: 100%;
+
     .hero-container {
         width: 90%;
         margin: 0 auto;
         padding: 20px 5px;
-        .InfoPersonal{
+
+        .InfoPersonal {
             width: 100%;
-            .InfoPersonal__title-suave{
+
+            .InfoPersonal__title-suave {
                 color: #9797A7;
                 font-size: $tamaño-titulo;
             }
-            .InfoPersonal__title-bold{
+
+            .InfoPersonal__title-bold {
                 color: #ffff;
                 font-weight: bold;
                 font-size: $tamaño-titulo;
-              
+
             }
-            .InfoPersonal__text{
+
+            .InfoPersonal__text {
                 color: #9797A7;
                 width: 90%;
                 margin: 15px 0 5px 0;
                 font-size: 15px;
             }
         }
-        .Servicios{
+
+        .Servicios {
             width: 100%;
-            .Servicios__title{
+
+            .Servicios__title {
                 color: #807e8d;
                 font-size: 20px;
-                margin:  10px 0;
+                margin: 10px 0;
             }
-            .Servicios__info{
+
+            .Servicios__info {
                 color: #AEAFB9;
                 width: 60%;
                 text-align: left;
                 margin: 10px 0;
                 font-size: 14px;
             }
-            .Servicios__button{
+
+            .Servicios__button {
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
                 background-color: transparent;
                 border: none;
-              padding: 5px 20px;
-                span, i{
+                padding: 5px 20px;
+                gap: 8px;
+                cursor: pointer;
+
+                span,
+                i {
                     font-size: 10px;
                     color: #9F8855;
                 }
 
             }
-            .Servicios__redes{
-               width: 50%;
-               margin-top: 10px;
-               display: flex;
-               align-items: center;
-               justify-content: space-around;
-               i{
-                color: #9F8855;
-               }
+
+            .Servicios__redes {
+                width: 50%;
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                i {
+                    color: #9F8855;
+                }
             }
         }
-        .user{
+
+        .user {
             width: 100%;
             position: relative;
-            display: flex;
-            justify-content: center;
+            display: grid;
+            place-items: center;
             margin-top: 20px;
-            img{
+            overflow: hidden;
+
+            img {
                 width: 100%;
                 z-index: 100;
             }
-            &::after{
+
+            &::after {
                 content: "";
-                width: 220px;
-                height: 220px;
+                width: 250px;
+                height: 250px;
                 border-radius: 50%;
                 position: absolute;
-                background-color:#282832;
+                top: 0;
+                background-color: #282832;
                 z-index: 1;
             }
         }
