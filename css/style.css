@@ -1,4 +1,16 @@
-* {
+@keyframes user-animated {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.7);
+  }
+}
+*, *::after, *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -58,6 +70,9 @@ body {
   .header {
     background-color: #282832;
   }
+  .header .logo {
+    width: 40%;
+  }
   .header .logo .logo-title {
     width: 90%;
     margin-left: 10px;
@@ -71,6 +86,7 @@ body {
     height: 4px;
     background-color: white;
     margin: 8px 0;
+    border-radius: 5px;
   }
   .header .navbar {
     height: 0;
@@ -150,17 +166,25 @@ body {
 .hero .hero-container .Servicios .Servicios__button {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   background-color: transparent;
+  border-radius: 10px;
   border: none;
   padding: 5px 20px;
   gap: 8px;
   cursor: pointer;
+  transition: 0.5s all;
 }
 .hero .hero-container .Servicios .Servicios__button span,
 .hero .hero-container .Servicios .Servicios__button i {
   font-size: 10px;
   color: #9F8855;
+}
+.hero .hero-container .Servicios .Servicios__button:hover {
+  background-color: #9F8855;
+}
+.hero .hero-container .Servicios .Servicios__button:hover span,
+.hero .hero-container .Servicios .Servicios__button:hover i {
+  color: whitesmoke;
 }
 .hero .hero-container .Servicios .Servicios__redes {
   width: 50%;
@@ -171,6 +195,13 @@ body {
 }
 .hero .hero-container .Servicios .Servicios__redes i {
   color: #9F8855;
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.5s all;
+}
+.hero .hero-container .Servicios .Servicios__redes i:hover {
+  background-color: #9F8855;
+  color: white;
 }
 .hero .hero-container .user {
   width: 100%;
@@ -179,20 +210,39 @@ body {
   place-items: center;
   margin-top: 20px;
   overflow: hidden;
+  /*  &::after {
+    SOLO ES PARA PONER UN CIRCULO ATRAS
+       content: "";
+       width: 250px;
+       height: 250px;
+       border-radius: 50%;
+       position: absolute;
+       top: 0;
+       background-color: #282832;
+       z-index: 1;
+   } */
 }
 .hero .hero-container .user img {
   width: 100%;
   z-index: 100;
 }
-.hero .hero-container .user::after {
+.hero .hero-container .user::before, .hero .hero-container .user::after {
   content: "";
-  width: 250px;
-  height: 250px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   position: absolute;
-  top: 0;
+  margin: 0;
   background-color: #282832;
+  opacity: 0;
   z-index: 1;
+  animation: user-animated 1.7s infinite;
+}
+.hero .hero-container .user::before {
+  animation-delay: 1s;
+}
+.hero .hero-container .user::after {
+  animation-delay: 1.3s;
 }
 .hero .hero-container .Empresas {
   display: grid;
@@ -208,6 +258,7 @@ body {
 }
 .hero .hero-container .Empresas__item {
   width: 100%;
+  background-color: rgba(255, 233, 233, 0.986);
   object-fit: contain;
   height: 35px;
 }

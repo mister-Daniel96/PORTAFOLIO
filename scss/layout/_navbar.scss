@@ -10,7 +10,8 @@
     top: 0;
     left: 0;
     right: 0;
-z-index: 200;
+    z-index: 200;
+
     .logo {
         display: flex;
         width: 20%;
@@ -54,6 +55,7 @@ z-index: 200;
         background-color: #282832;
 
         .logo {
+            width: 40%;
 
             .logo-title {
                 width: 90%;
@@ -71,7 +73,7 @@ z-index: 200;
                 height: 4px;
                 background-color: white;
                 margin: 8px 0;
-
+                border-radius: 5px;
 
             }
 

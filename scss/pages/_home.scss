@@ -52,12 +52,14 @@
             .Servicios__button {
                 display: flex;
                 align-items: center;
-                justify-content: space-evenly;
+                //  justify-content: space-evenly;
                 background-color: transparent;
+                border-radius: 10px;
                 border: none;
                 padding: 5px 20px;
                 gap: 8px;
                 cursor: pointer;
+                transition: 0.5s all;
 
                 span,
                 i {
@@ -65,6 +67,14 @@
                     color: #9F8855;
                 }
 
+                &:hover {
+                    background-color: #9F8855;
+
+                    span,
+                    i {
+                        color: whitesmoke;
+                    }
+                }
             }
 
             .Servicios__redes {
@@ -76,7 +86,16 @@
 
                 i {
                     color: #9F8855;
+                    padding: 10px;
+                    border-radius: 50%;
+                    transition: 0.5s all;
+
+                    &:hover {
+                        background-color: #9F8855;
+                        color: white;
+                    }
                 }
+
             }
         }
 
@@ -93,7 +112,8 @@
                 z-index: 100;
             }
 
-            &::after {
+           /*  &::after {
+             SOLO ES PARA PONER UN CIRCULO ATRAS
                 content: "";
                 width: 250px;
                 height: 250px;
@@ -102,7 +122,26 @@
                 top: 0;
                 background-color: #282832;
                 z-index: 1;
+            } */
+            &::before,&::after {
+                content: "";
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                position: absolute;
+                margin: 0;
+                background-color: #282832;
+                opacity: 0;
+                z-index: 1;
+                animation: user-animated 1.7s infinite;
             }
+            &::before{
+                animation-delay:1s ;
+            }
+            &::after{
+                animation-delay:1.3s;
+            }
+           
         }
 
         .Empresas {
@@ -119,8 +158,10 @@
 
             &__item {
                 width: 100%;
+                background-color: rgba(255, 233, 233, 0.986);
                 object-fit: contain;
                 height: 35px
+                
             }
         }
     }
