@@ -7,7 +7,7 @@
   }
   100% {
     opacity: 0;
-    transform: scale(2.7);
+    transform: scale(2.5);
   }
 }
 *, *::after, *::before {
