@@ -4,3 +4,10 @@ bars.onclick = function () {
   navbar.classList.toggle("active");
 
 };
+
+const cargar=()=>{
+  for (let i = 0; i < 100; i++) {
+    console.log('@Darkwin');
+    
+  }
+}
