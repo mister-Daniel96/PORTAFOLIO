@@ -3,7 +3,7 @@
     background-color: #373543;
     min-height: 100vh;
     width: 100%;
-
+    padding: 5px;
 
     .hero-container {
         width: 90%;
@@ -162,8 +162,8 @@
             place-items: center;
             //grid-template-columns: repeat(auto-fit, minmax(min(100px, 50%), 1fr));
 
-              grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr); 
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
             gap: 10px;
             background-color: #373543;
             box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.233);
@@ -178,9 +178,53 @@
     }
 }
 
-.proyectos {
+.Proyectos {
     min-height: 100vh;
     width: 100%;
     background-color: #282832;
+    padding: 5px;
+    /*  para evitar el colapso de margenes de padre-hijo
+    como en este caso que si le doy un margen al hijo y
+    el padre  no tiene un padding, pasa que al padre tambien
+     recibe   un margen y crea un espacio blanco 
+     PARA EVITAR ESTO HAY QUE DARLE AL PADRE UN PADDING CHICO
+     */
+
+
+    .Calificacion {
+        margin: 0 auto;
+        margin-top: 100px;
+        width: 90%;
+        color: white;
+
+        h2 {
+            padding: 10px 0;
+        }
+
+        p {
+            width: 80%;
+            text-align: justify;
+            padding-bottom: 15px;
+        }
+
+        .points__Calificacion {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+
+            .item__points {
+                span {
+                    display: block;
+                    padding: 5px 0;
+                    color: #9F8855;
+                    font-weight: bold;
+                    font-size:20px ;
+                    text-align: start;
+                    
+                }
+            }
+        }
+    }
 
 }
