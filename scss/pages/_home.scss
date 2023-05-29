@@ -1,3 +1,31 @@
+.button-general {
+    display: flex;
+    align-items: center;
+    //  justify-content: space-evenly;
+    background-color: transparent;
+    border-radius: 10px;
+    border: none;
+    padding: 5px 20px;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.5s all;
+
+    span,
+    i {
+        font-size: 10px;
+        color: #9F8855;
+    }
+
+    &:hover {
+        background-color: #9F8855;
+
+        span,
+        i {
+            color: whitesmoke;
+        }
+    }
+}
+
 .hero {
     margin-top: 70px;
     background-color: #373543;
@@ -52,7 +80,7 @@
             }
 
             .Servicios__button {
-                display: flex;
+                /* display: flex;
                 align-items: center;
                 //  justify-content: space-evenly;
                 background-color: transparent;
@@ -76,7 +104,8 @@
                     i {
                         color: whitesmoke;
                     }
-                }
+                } */
+                @extend .button-general;
             }
 
             .Servicios__redes {
@@ -239,7 +268,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-transition: 0.3s all;
+            transition: 0.3s all;
+
             img {
                 width: 80px;
                 height: 60px;
@@ -252,10 +282,40 @@ transition: 0.3s all;
                     color: #807e8d;
                 }
             }
-            &:hover{
-               background-color:#373543;
+
+            i {
+                color: #9F8855;
+                font-size: 20px;
+            }
+
+            &:hover {
+                background-color: #373543;
             }
         }
     }
 
+    .CardProyectos {
+        margin: 0 auto;
+        width: 90%;
+        color: white;
+        padding-top: 40px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+        .item__CardProyectos {
+            width: 90%;
+            margin: 0 auto;
+            height: 250px;
+            border: 1px solid #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            button {
+                @extend .button-general;
+                width: 40%;
+            }
+        }
+    }
 }

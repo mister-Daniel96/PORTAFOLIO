@@ -119,6 +119,34 @@ body {
     opacity: 1;
   }
 }
+.button-general, .Proyectos .CardProyectos .item__CardProyectos button, .hero .hero-container .Servicios .Servicios__button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 20px;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.button-general span, .Proyectos .CardProyectos .item__CardProyectos button span, .hero .hero-container .Servicios .Servicios__button span,
+.button-general i,
+.Proyectos .CardProyectos .item__CardProyectos button i,
+.hero .hero-container .Servicios .Servicios__button i {
+  font-size: 10px;
+  color: #9F8855;
+}
+.button-general:hover, .Proyectos .CardProyectos .item__CardProyectos button:hover, .hero .hero-container .Servicios .Servicios__button:hover {
+  background-color: #9F8855;
+}
+.button-general:hover span, .Proyectos .CardProyectos .item__CardProyectos button:hover span, .hero .hero-container .Servicios .Servicios__button:hover span,
+.button-general:hover i,
+.Proyectos .CardProyectos .item__CardProyectos button:hover i,
+.hero .hero-container .Servicios .Servicios__button:hover i {
+  color: whitesmoke;
+}
+
 .hero {
   margin-top: 70px;
   background-color: #373543;
@@ -166,8 +194,9 @@ body {
   font-size: 14px;
 }
 .hero .hero-container .Servicios .Servicios__button {
-  display: flex;
+  /* display: flex;
   align-items: center;
+  //  justify-content: space-evenly;
   background-color: transparent;
   border-radius: 10px;
   border: none;
@@ -175,18 +204,21 @@ body {
   gap: 8px;
   cursor: pointer;
   transition: 0.5s all;
-}
-.hero .hero-container .Servicios .Servicios__button span,
-.hero .hero-container .Servicios .Servicios__button i {
-  font-size: 10px;
-  color: #9F8855;
-}
-.hero .hero-container .Servicios .Servicios__button:hover {
-  background-color: #9F8855;
-}
-.hero .hero-container .Servicios .Servicios__button:hover span,
-.hero .hero-container .Servicios .Servicios__button:hover i {
-  color: whitesmoke;
+
+  span,
+  i {
+      font-size: 10px;
+      color: #9F8855;
+  }
+
+  &:hover {
+      background-color: #9F8855;
+
+      span,
+      i {
+          color: whitesmoke;
+      }
+  } */
 }
 .hero .hero-container .Servicios .Servicios__redes {
   width: 50%;
@@ -332,8 +364,34 @@ body {
 .Proyectos .MisProyectos .item__MisProyectos .info__MisProyectos span {
   color: #807e8d;
 }
+.Proyectos .MisProyectos .item__MisProyectos i {
+  color: #9F8855;
+  font-size: 20px;
+}
 .Proyectos .MisProyectos .item__MisProyectos:hover {
   background-color: #373543;
+}
+.Proyectos .CardProyectos {
+  margin: 0 auto;
+  width: 90%;
+  color: white;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Proyectos .CardProyectos .item__CardProyectos {
+  width: 90%;
+  margin: 0 auto;
+  height: 250px;
+  border: 1px solid #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.Proyectos .CardProyectos .item__CardProyectos button {
+  width: 40%;
 }
 
 /*# sourceMappingURL=style.css.map */
