@@ -303,6 +303,7 @@ body {
   width: 100%;
   background-color: #282832;
   padding: 5px;
+  position: relative;
   /*  para evitar el colapso de margenes de padre-hijo
   como en este caso que si le doy un margen al hijo y
   el padre  no tiene un padding, pasa que al padre tambien
@@ -345,6 +346,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding-bottom: 200px;
 }
 .Proyectos .MisProyectos .item__MisProyectos {
   width: 100%;
@@ -379,11 +381,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -650px;
 }
 .Proyectos .CardProyectos .item__CardProyectos {
   width: 90%;
   margin: 0 auto;
   height: 250px;
+  background-color: #373543;
   border: 1px solid #fff;
   padding: 20px;
   display: flex;
@@ -391,7 +398,14 @@ body {
   justify-content: space-evenly;
 }
 .Proyectos .CardProyectos .item__CardProyectos button {
-  width: 60%;
+  width: 50%;
+}
+
+.otro {
+  background-color: #2A2A32;
+  min-height: 100vh;
+  width: 100%;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
